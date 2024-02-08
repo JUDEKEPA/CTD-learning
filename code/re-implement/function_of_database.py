@@ -9,8 +9,9 @@ from pycalphad.variables import Species
 from pycalphad.core.cache import fhash
 from pycalphad.core.utils import recursive_tuplify
 
+
 # --------------------------------------------
-class Phase(object): #pylint: disable=R0903
+class Phase(object):    # pylint: disable=R0903
     """
     Phase in the database.
 
@@ -31,15 +32,19 @@ class Phase(object): #pylint: disable=R0903
         self.constituents = None
         self.sublattices = []
         self.model_hints = {}
+
     def __eq__(self, other):
         if type(self) == type(other):
             return self.__dict__ == other.__dict__
         else:
             return False
+
     def __ne__(self, other):
         return not self.__eq__(other)
+
     def __repr__(self):
         return 'Phase({0!r})'.format(self.__dict__)
+
     def __hash__(self):
         return hash((self.name, self.constituents, tuple(self.sublattices),
                      tuple(sorted(recursive_tuplify(self.model_hints.items())))))

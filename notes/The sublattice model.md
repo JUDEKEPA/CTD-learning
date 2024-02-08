@@ -51,6 +51,18 @@ Actually, the enthalpy and entropy can be obtained by this function with basic t
 
 ![img.png](figures/several state functions obtained by gibbs function.png)
 
+Each function can be used just in limited temperature range and above the Debye temperature. (When temperature is above
+Debye temperature, the Cv will be a constant and equal to 3R. Enthalpy, as the integral of heat capacity, will 
+continue to increase linearly with temperature. The entropy increases linearly with the logarithm of temperature.)
+
+The lower temperature limit is usually 298.15K, which is sufficient because the require diffusion is necessary to reach
+the equilibrium.
+
+When temperature range is large, the regression will need more T^n (n=4, 5, 6...). To decrease the number of
+coefficients, several temperature ranges and expressions should be used. Usually at least two and often up to four or 
+five temperature regions with different coefficients are used to describe Gibbs energy. The first order and the second 
+order derivatives of each function must be continuous, otherwise it will behave like a phase transition.
+
 So look back at the FUNCTION GHSERAL, it is a regression result of its experiment data. It matches the temperature
 dependence part in the book. 700 Y means the second function should be used above 700K, which means the first function
 should be used below 700K. The 933.6 Y means the third function should be used when temperature is above 933.6K, and 
