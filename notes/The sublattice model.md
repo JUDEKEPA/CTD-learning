@@ -77,3 +77,27 @@ The Database class in pycalphad allows three different database input, make the 
 only .tdb file will be used as input, I made a \_init_ definition in __re-implement\function_of_database.py__. While I
 did not change other code, the database can load normally. 
 
+The io in pycalphad accomplishes read of database and makes it ready for Gibbs energy calculation with different 
+conditions. While investigating how io module works, I continued the theory learning. The follow part is theory of 
+pressure dependence.
+
+For condensed matters, the pressure-dependent properties are often ignored, since they are only important at very high
+temperature. For condensed phases under limited pressure range, Murnaghan model is useful.
+
+The compressibility, the inverse of bulk modulus that assumed can be expressed by a linear pressure dependence. 
+
+![img.png](figures/compressibility.png)
+
+K0(T) is the compressibility at 0 pressure, and n is a constant that independent with temperature and pressure. n is 
+about 4 for many phases.
+
+The expression of thermal expansivity:
+
+![img.png](figures/thermal expansity.png)
+
+Integrate Murnaghan model with Gibbs energy:
+
+![img.png](figures/Murnaghen model integrate with Gibbs energy.png)
+
+There is a new pressure-dependence model introduced, I did not describe it in details here.
+
