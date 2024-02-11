@@ -17,4 +17,8 @@ From what I know about computational thermodynamics right now, I list these poin
         works.
         
         ....
-        
+
+I did not find some cases directly in .TDB file (I did not make much effort on that), but I think these theories are
+also important. I made the path into two part, the theory learning will mainly base on the book while the code learning
+direction will describe the code of pycalphad. When the theory learning matches the code in pycalphad, I will try to 
+explain how theory becomes codes.

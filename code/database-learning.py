@@ -3,7 +3,7 @@ from pycalphad import Database, binplot
 import pycalphad.variables as v
 
 # Load database and choose the phases that will be considered
-db_alzn = Database('alzn_mey.tdb') #'alzn_mey.tdb'
+db_alzn = Database('cfe_broshe.tdb') #'alzn_mey.tdb'
 db_test = Database()
 
 '''
