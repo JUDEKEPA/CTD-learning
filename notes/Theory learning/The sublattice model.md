@@ -67,5 +67,6 @@ Two method: 1. extrapolations. 2. ab initio calculations.
 It is necessary to estimate a value of the relative stability of the metastable structure as an “end member” of the
 phase.
 
-
+For extrapolations, the Kopp–Neumann rule is important.
+It indicates that C$_p$(AmBn)=m×Cp(A)+n×Cp(B)
 
