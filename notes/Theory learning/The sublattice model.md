@@ -68,5 +68,73 @@ It is necessary to estimate a value of the relative stability of the metastable 
 phase.
 
 For extrapolations, the Kopp–Neumann rule is important.
-It indicates that C$_p$(AmBn)=m×Cp(A)+n×Cp(B)
+It indicates that Cp(AmBn)=m×Cp(A)+n×Cp(B), as a result, H(AmBn)=m×H(A)+n×H(B). In the book, this equation is provided:
+
+![img.png](figures/Kopp-Neumann.png)
+
+For my personal understanding, the Kopp–Neumann rule refers to the enthalpy terms in Gibbs energy, and the a0 and a1T...
+represent the entropy term that need to fit the experiment result (As you can see in "how to get Gibbs energy from 
+experiments" part, the use of Kopp–Neumann rule satisfy the condition of enthalpy, the mixture entropy(I am not very
+sure) has no relationship like S(AmBn)=m×S(A)+n×S(B), so a0 and a1T term are required). 
+
+Here is an example:
+A has 3 different phase types, B has 3 different phase types. AmBn has 3 different phase types. when use the 
+equation to calculate the Gibbs energy of three different phase types of AmBn. The GiSER all use the most stable phase 
+for A and B at SER conditions.
+
+There will be three functions for three phase types of AmBn like this:
+
+        Gphase1=sum(bB\*GaSER+bB\*GbSER)+a0(phase1)+a1(phase1)T
+        Gphase2=sum(bB\*GaSER+bB\*GbSER)+a0(phase2)+a1(phase2)T
+        Gphase3=sum(bB\*GaSER+bB\*GbSER)+a0(phase3)+a1(phase3)T
+
+### Notes: how to get Gibbs energy from experiments
+Gibbs energy function: 
+
+        ΔG = ΔH - TΔS
+
+ΔH can be got calorimetrically. Under constant pressure, ΔH = Q. When Cp is independent from T, Q = (T2-T1)*Cp. So 
+Cp = dQ/dT.
+
+Then ΔS = ∫dQ/T, dQ = Cp*dT, so the ΔS = ∫(dCp/T)dT. For numerical approach, ΔS = Cp\*Ln(T2/T1)
+
+## Variables for composition dependence
+In each phase in the system the components may form many different species or ions and enter as constituents various
+types of sites in a crystalline phase.
+
+Concepts of composition, component, and constituent (may not precise):
+
+            composition: 组成 Fe25Ni25Cr25Mn25
+            component: 成分 Fe25 in Fe25Ni25Cr25Mn25
+            constituent: 组分 (Fe5Ni5Cr5Mn5) and (Fe20Ni20Cr20Mn20) are two constituents. 
+
+## Internal degree of freedom
+Gibbs phase rule:
+
+            F = C - P + 2
+
+At an equilibrium, each phase has a same chemical potential, so for n phases there will be n-1 chemical potential 
+equations, each term is a function of C and Pressure and Temperature. For m Components can provide m-1 independent
+constraint equations. so the m-1 + 2 - (n-1) refers to the redundant equations, which is the freedom of the system.
+
+## The constituent fraction
+The species that constitute the phase are called the "constituents". For a gas, the constituents fraction is yi, of each
+species i in the gas describes the internal equilibrium in the gas.
+
+Crystalline phase, sublattices are constituents. And the fraction of sublattice is called "__site fraction__".
+
+For a component:
+
+![img.png](figures/component sublattice.png)
+
+Denominator is the sum mole of the system. Numerator is the sum mole of component i.
+
+It should notice:
+If there are more constituents than components one cannot obtain the constituent fractions from the mole fractions
+without a minimization of the Gibbs energy of the phase.
+
+When number of constituents is larger than components, the equations of components are unsolvable. During the Global
+minimization process, it will find the constituents refers to minimum Gibbs energy of the system. I feel it would be
+very complex.
+
 
