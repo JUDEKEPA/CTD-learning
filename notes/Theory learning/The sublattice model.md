@@ -96,7 +96,7 @@ Gibbs energy function:
 ΔH can be got calorimetrically. Under constant pressure, ΔH = Q. When Cp is independent from T, Q = (T2-T1)*Cp. So 
 Cp = dQ/dT.
 
-Then ΔS = ∫dQ/T, dQ = Cp*dT, so the ΔS = ∫(dCp/T)dT. For numerical approach, ΔS = Cp\*Ln(T2/T1)
+Then ΔS = ∫dQ/T, dQ = Cp*dT, so the ΔS = ∫(Cp/T)dT. For numerical approach, ΔS = Cp\*Ln(T2/T1)
 
 ## Variables for composition dependence
 In each phase in the system the components may form many different species or ions and enter as constituents various
@@ -136,5 +136,77 @@ without a minimization of the Gibbs energy of the phase.
 When number of constituents is larger than components, the equations of components are unsolvable. During the Global
 minimization process, it will find the constituents refers to minimum Gibbs energy of the system. I feel it would be
 very complex.
+
+The concepts of sublattice, constituent, and site fraction.
+A crystal can be separated into several sublattices. For certain sublattice, it contains some sites. A certain 
+constituent will occupy sites in the sublattice. The number of sites occupied by constituent i is Ni.
+
+![img.png](figures/site fraction in sublattice s.png)  
+
+Vacancy fraction:
+
+![img.png](figures/vacancy fraction.png)
+
+Vacancy can be treated as real component while its chemical potential is always zero.
+
+### note: the detailed concepts of sublattice (important for calculate the derivatives of constituent)
+I still feel confused by several concepts in sublattice. These concepts are important in some equations. So I want to
+clarify these concepts.
+
+    Lattice: The lattice refers to the highly ordered structure of a crystal. It is a three-dimensional arrangement of
+             points (lattice points) that defines the positions of atoms or molecules in the crystal. Each point in the
+             lattice represents the position of a particle and is periodically repeated in space.
+    
+    Sublattice: A sublattice is a division of the lattice where specific lattice points are occupied by a particular
+                species or type of atom. In complex crystals, multiple sublattices can be present, each with a distinct
+                arrangement or occupancy by different atomic or ionic species.
+    
+    Sites: These are the specific locations within the lattice or sublattice that can be occupied by atoms or ions.  
+           Each site has a coordination number which tells how many neighboring atoms or ions directly surround a site.
+    
+    Species: In thermodynamic terms, species refer to the different types of particles (atoms, molecules, ions) that 
+             are present in a system. In a lattice or sublattice, different species may occupy different sites.
+
+    Constituents: The atoms, ions, or vacancies that occupy the sites within a sublattice. A single sublattice 
+                  can have multiple different constituents (like Fe, Ni in one sublattice of an alloy), and their 
+                  fractions add up to unity. For a certain constituent, it may contain two or more different kinds of 
+                  elements.
+
+
+![img.png](with site ratio.png) ![img.png](figures/component sublattice.png)
+
+The comparison of these two equations is a good way to understand the concepts of sublattice.
+
+The difference between the equations is that the appearance of s. In the first equation, except first sum term, it is 
+the calculation of xi in each sublattice. And yj(s) is each site fraction in that sublattice. For example, one phase 
+may contain two sublattice, and each sublattice contains two different constituents. So yj(s) refers to the number of 
+sites in constituent(j) divide number of sites in sublattice s. As a result, if without a(s) the equation depicts the
+xi in a certain sublattice s. When each sublattice has different number of sites, to calculate the xi, it is necessary 
+to multiply how much the sublattice s in the whole phase. So a(s) is needed.
+
+For the second equation, the yj directly represent how much the site(j) of a constituent occupies in the whole phase 
+crystal. The first equation makes each sublattice independent. 
+
+For both equations, bij represent stoichiometric coefficient of element i in constituent j. This coefficient tells us 
+how many atoms of element i are present in a given constituent j.
+
+## Modeling particular physical phenomena
+
+### Lattice vibrations
+This method has still not been implemented in most software and will not be discussed further in the book.
+
+### A ferromagnetic transition model
+
+        First-order transition: The first order derivatives of Gibbs energy is not continuous. (The change of
+                                compositions)
+        Second-order transition: The second order derivatives of Gibbs energy is not continuous. (due to magnetic
+                                 ordering or other internal changes, no composition changes)
+
+Start with its contribution to the heat capacity of the system. Empirical expressions have been proposed by 
+Inden (1981):
+
+![img.png](figures/heat capacity and empirical expression.png)
+
+fm below Curie temperature, pm above Curie temperature. τ is T/Tc, Tc is Curie temperature.
 
 
