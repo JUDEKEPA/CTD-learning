@@ -207,6 +207,78 @@ Inden (1981):
 
 ![img.png](figures/heat capacity and empirical expression.png)
 
-fm below Curie temperature, pm above Curie temperature. τ is T/Tc, Tc is Curie temperature.
+fm below Curie temperature, pm above Curie temperature. τ is T/Tc, Tc is Curie temperature. total magnetic contribution 
+to the molar entropy is set equal to −Rln(1+β), where β is the mean magnetic moment measured in Bohr magnetons. This is 
+equivalent to assuming that the magnetic entropy is due to the disordering of localized spins with average magnitude 
+equal to β. I did not provide further details of magnetic transition, but the total Gibbs energy becomes this when 
+considering magnetic transition:
 
+![img.png](figures/Gibbs energy with magnetic transition.png)
+
+
+## Models for the Gibbs energy of solutions
+
+###  The general form of the Gibbs-energy model
+
+![img.png](figures/general form of Gibbs energy.png)
+
+srf is "surface reference", represents _unreacted_ mixture of the constituents of the phase. I think the "unreacted" 
+here means that it represents several constituents only are put on their positions, instead of any react, but only 
+weighted sum of Gibbs energy of each constituent.
+
+phy is Gibbs energy due to physical models.
+
+cnf is "configurational entropy". It is based on the number of possible arrangements of constituents in the phase given
+by S = kln(W).
+
+E means excess Gibbs energy.
+
+### The compound-energy formalism
+
+The concept of "constituent array" specifies one or more constituents on each sublattice and is denoted I, while the 
+individual constituents are denoted i, sometimes with a superscript (s) to denote the sublattice s.
+
+To understand this concept, let's move step by step. 
+        
+        1. When the crystal type is defined, its sublattice model is defined too. That means, the number of sublattices
+        and their fractions remain unchanging.
+        
+        2. When a sublattice only contains one constituent, the corresponding constituent array is a zeroth order array.
+        While it contains more than one constituent, the array will be with different orders.
+
+        3. The second point indicates that, if a sublattice only contains one constituent, the composition of the 
+        sublattice is defined. When a sublattice contains more than one constituent, its composition is undefined.
+        I think this will influence the process of global minimization.
+
+The Gibbs-energy expression for the CEF is
+
+![img.png](figures/Gibbs energy CEF expression.png)
+
+The first equation represent the sum Gibbs energy of sublattice with one constituent. In this case, PI0(Y) is always
+equal to 1 since the sublattice is defined by one constituent. It is worth to notice that I0 maybe not any stable 
+compound, so GI0 must be estimated in some way.
+
+The second term calculated configurational entropy. When a sublattice s contains only one constituent, its 
+configurational entropy is equal to zero. This equation only works when a sublattice contains more than one constituent.
+
+The third equation represent the Gibbs energy of sublattics that contain more than one constituent.  For the second-
+order constituent array it is necessary to include both the case with three interacting constituents on one sublattice 
+and that with two interacting constituents on two different sublattices. _My personal understanding of "include both the
+case with three interacting constituents on one sublattice and that with two interacting constituents on two different 
+sublattices" is when a sublattice contains three constituents, we cannot suppose that this sublattice will contain all 
+three constituents. We need to consider if it just contains two constituents. In this case, two independent group of two
+constituents need to be considered separately._ This phenomenon is called "reciprocal interactions".
+
+For partial Gibbs energy equation:
+
+![img.png](figures/partial gibbs energy of components.png)
+
+When using sublattice model, it might not be possible to directly calculate the partial Gibbs energy of a component, but
+the partial Gibbs energy for a constituent array of zeroth order can be calculated by:
+
+![img.png](figures/partial gibbs energy of constituent.png)
+
+where the first sum is taken over the constituents i defined by the constituent array (one in each sublattice) and the 
+second sum is over all constituents in all sublattices. The first sum term indicates that a zeroth-order constituent 
+array can be associated with multiple sublattices.
 
