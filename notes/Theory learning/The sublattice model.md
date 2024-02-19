@@ -282,3 +282,41 @@ where the first sum is taken over the constituents i defined by the constituent 
 second sum is over all constituents in all sublattices. The first sum term indicates that a zeroth-order constituent 
 array can be associated with multiple sublattices.
 
+### The relation between the compound and cluster energies
+
+It seems to be a Gibbs energy modeling method, I did not read it in details.
+
+### The reference state for the Gibbs energy
+
+This part provide Gibbs energy modeling method for a constituent array I.
+
+![img.png](figures/Gibbs energy for a constituent array.png)
+
+bij is the stoichiometry factor for the component j in the constituent array I and HjSER is the enthalpy of the 
+component j in its reference state.
+
+### The ideal-substitutional-solution model
+
+When a solution of non-interacting constituents mixing randomly with each other, the Gibbs energy is:
+
+![img.png](figures/ideal components.png)
+
+The condition is, the constituents are the same as components.
+
+When the constituents are different from components, the Gibbs energy is
+
+![img.png](figures/ideal constituents.png)
+
+that the mixing of constituents on each sublattice is an ideal solution.
+
+For gas phase:
+
+![img.png](figures/gibbs energy-gas phase ideal.png)
+
+General form of gibbs energy of ideal-substitutional-solution:
+
+![img.png](figures/general form gibbs energy-ideal.png)
+
+It is important to select a good “ideal” model in order to have a simple excess Gibbs energy.
+
+When surroundings of a constituent are irrelevant can be described by ideal models. 
