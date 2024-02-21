@@ -320,3 +320,120 @@ General form of gibbs energy of ideal-substitutional-solution:
 It is important to select a good “ideal” model in order to have a simple excess Gibbs energy.
 
 When surroundings of a constituent are irrelevant can be described by ideal models. 
+
+## Non-ideal behavior of solutions
+
+In an ideal solution, the bond between two different constituents is equal to that between two identical constituents.
+The simplest way to introduce a non-ideal behavior of solutions is to introduce the energy difference for these 
+different bonds as:
+
+![img.png](figures/bond energy difference.png)
+
+It is the difference between the i—j bond energy and the average of the i—i and j—j bond energies. When ε is negative,
+ it means that unlike constituents prefer to be together, i.e., long- and short-range order or clustering. If ε is
+positive, the constituents prefer to surround themselves with constituents of the same kind, which leads to the
+formation of miscibility gap.
+
+![img.png](figures/miscibility gap.png)
+
+In crystalline solid the number of bonds is fixed, but liquid phase the number of bonds can vary.
+
+### The substitutional-regular-solution model
+
+![img.png](figures/Excess gibbs energy in binary interactions.png)
+
+### Dilute solutions, Henry’s and Raoult’s laws
+
+In the very dilute range all phases have the property that the activity of each of the constituents varies linearly with
+the fraction of the constituent.
+
+![img.png](figures/Henry's law.png)
+
+Raoult’s law applies to the solvent in a dilute solution, stating that the activity of the solvent is equal to the 
+fraction of the solvent when the solute is dilute. Indicating ai=xi.
+
+Hillert’s method to describe the gibbs energy for a solute in solvent:
+
+![img.png](figures/Hillert's method gibbs solute j.png)
+
+Mj is a modification of 0Gj when "1" is the solvent. The first sum term means the combine of j with other solutes minus 
+their combination with solvent respectively.
+
+## Models for the excess Gibbs energy
+
+Equations for the excess Gibbs energy:
+
+![img.png](figures/excess gibbs energy.png)
+
+The binary, ternary, and higher-order interactions in the excess Gibbs energy will be described separately.
+
+### The binary excess contribution to multicomponent systems
+
+Equation:
+
+![img.png](figures/excess gibbs energy-binary.png)
+
+Sum over interactions of i and j. For a sublattice model, the xi,xj are the components fractions in the constituent, 
+which means xi+xj not must be equal to 1. It can describe excess gibbs energy in each sublattice of a phase and the
+constituent fractions should be used.
+
+Physical point of view, if the nearest neighbor atoms number is z, the Lij=(z/2)εij. If Lij (regular-solution parameter)
+is independent of temperature, the model is called strictly regular model. In a real system, the regular-solution 
+parameters in different phases should be modeled with the same order of magnitude. Because the bond energies is 
+approximately independent of the phase structure.
+
+## The Redlich-Kister binary model
+
+The equation:
+
+![img.png](figures/Redlich-Kister binary model.png)
+
+R-K model is an extension of a single interaction parameter in a binary system, since a single interaction is always not
+enough to describe the experimental data. v here is different order of the interaction between i and j. This model is 
+advantageous for multi-component system, because the difference betweem i and j makes the excess energy remains the same
+shape with it in binary system. Only magnitude will change when the summation of xi and xj change.
+
+![img.png](figures/contribution of different term of R-K model.png)
+
+When observe this figure, do not forget the excess gibbs energy need to multiply the xi*xj. At least two orders need to 
+be considered since 0L is symmetrical.
+
+"subregular-solution model" is sometimes used when just two RK coefficients are employed, and “subsubregular” indicates 
+using three.
+
+If using many coefficients for R-K model, the description may not be proper when extrapolate to multi-component system.
+
+Parameter vLij is temperature dependent.  a linear temperature dependence is enough and only when heat-capacity data are
+available may one use more:
+
+![img.png](figures/vLij.png)
+
+excess enthalpy is described by aij and the excess entropy by bij. The Redlich–Kister power series is useful only when 
+the excess enthalpy is a smooth function.
+
+### The ternary excess contributions
+
+![img.png](figures/Ternary excess contributions.png)
+
+Hillert suggested the following type of composition dependence in the ternary excess parameter:
+
+![img.png](figures/ternary excess parameter.png)
+
+### Higher-order excess contributions
+
+![img.png](figures/high-order parameters.png)
+
+More summations, if there are discrepancies, correct by reassessment of the lower-order systems.
+
+### Extrapolation methods for binary excess models
+
+Muggianu method is a preferable method. Its treatment is only related to the relative value of two component and their 
+volume in the system. The idea is like R-K method. 
+
+![img.png](figures/Muggianu method.png)
+
+a ternary parameter that can be evaluated from the binary excess parameters. 
+
+![img.png](figures/ternary parameter evaluated from binary.png)
+
+1LAC and 1LBC is subregular-solution parameters
