@@ -173,7 +173,7 @@ clarify these concepts.
                   elements.
 
 
-![img.png](with site ratio.png) ![img.png](figures/component sublattice.png)
+![img.png](figures/with site ratio.png) ![img.png](figures/component sublattice.png)
 
 The comparison of these two equations is a good way to understand the concepts of sublattice.
 
@@ -436,4 +436,76 @@ a ternary parameter that can be evaluated from the binary excess parameters.
 
 ![img.png](figures/ternary parameter evaluated from binary.png)
 
-1LAC and 1LBC is subregular-solution parameters
+1LAC and 1LBC is subregular-solution parameters. As depicted in R-K model, the zero order term, the (xi-xj)^0 will 
+always be 1, so it is composition independent. The first order term is (xi-xj)^1, which means the linearly dependent 
+relationship of Gibbs energy and composition. The physical significance is that the equation mainly focus on the 
+interaction of each component.
+
+## Modeling using additional constituents
+
+I have browsed this part before learning the details. The former part is the modeling by "end member". No formation of 
+"strong" compounds involved since it has relatively "strange" behavior of gibbs energy, which will disturb the modeling
+process by regular-solution model.
+
+![img.png](figures/Mg-Sn phase diagram.png)
+
+There is a strong ordering in Mg2Sn. Two obvious features are the low entropy of mixing and the sharp increase of the 
+activity. It cannot be treated by the excess-Gibbs-energy formalism which describes a smooth change in curvature over 
+the whole composition range. It will introduce too many coefficients to describe this behavior. It is preferable to 
+modify the srfGm and cnfSm terms. For solid phases, sublattices can be introduced. For liquids and for cases in which
+sublattices are not possible, one may introduce fictitious constituents, usually called associates（联合体）.
+
+Fictitious constituents are used to describe short-range order (SRO), i.e., the local arrangement of atoms, and the 
+sublattice model to describe long-range order (LRO).
+
+In systems with SRO, unlike atoms tend to stay together for a shorter or longer length of time. The term “associate” was
+introduced to denote an association between unlike atoms when the attractive forces between the atoms are not strong 
+enough to form a stable chemical molecule.
+
+In the book the example of H–O system is used. H2O is directly considered as a constituent and thus there is no excess 
+gibbs energy.
+
+Substitutional associated solution equations:
+
+![img.png](figures/associated solution gibbs.png)
+
+### Non-random configurational entropy
+
+If the interactions create short-range ordering, its contribution to the Gibbs energy must be considered differently.
+
+####  The quasi-chemical model
+
+Equation:
+
+![img.png](figures/quasi-chemical model.png)
+
+mass-balance constraints:
+
+![img.png](figures/quasi-chemical model-mass balance.png)
+
+If yAB = yBA there is no LRO. When yAB=yBA, the bond between A and B has no preference. In this situation, the term
+RTyABln2 should be added since the positions of A and B are random. When oGAB = 0, it would be the ideal solution. The 
+z/2 indicates that each bond is distinct, so when oGAB = 0 each bond is not distinct. In this case, the entropy is 
+overestimated. It can be understood if z=2. When z=2, it identically represents the gas of AA, BB, AB, and BA. While the
+gas molecule can rotate freely, the atoms in phase crystal need to stay in its site, to correct the overestimation:
+
+![img.png](figures/correct cnfS overestimation.png)
+
+#### The cluster-variation method
+
+Introduces clusters with three, four or more atoms. fcc lattice in the tetrahedron approximation：
+
+For the case in which there is no LRO, there are five constituents or “clusters,” A, A0.75B0.25, A0.5B0.5, A0.25B0.75, 
+and B. Formulas:
+
+![img.png](figures/CVM.png)
+
+The correction of id.cnfS is complex, it contains term of the free degree of each tetrahedron and pair probability.
+
+
+## Modeling using sublattice
+
+
+
+
+
