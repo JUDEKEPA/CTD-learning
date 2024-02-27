@@ -505,7 +505,129 @@ The correction of id.cnfS is complex, it contains term of the free degree of eac
 
 ## Modeling using sublattice
 
+The simplest case of a sublattice model would be two sublattices with two constituents in each. A shorthand notation of
+this would be (A, B)m(C, D)n. m and n give the ratio of sites on the two sublattices. __In a crystalline m and n are 
+fixed numbers__. It is advisable to use the smallest possible integer numbers for the site ratios. The constituents A, 
+B, C, and D can represent atoms, ions, anti-site atoms, vacancies, etc. It should notice that the quantities of A and B
+in the sublattice are not necessarily fixed. This approach provides the flexibility for the composition of the compound.
 
 
+### Reciprocal solutions
 
+Cannot be modeled as substitutional solution
+
+![img.png](figures/Reciprocal solutions.png)
+
+the reciprocal energy represented by this reaction is
+
+![img.png](figures/reciprocal energy.png)
+
+First two terms in CEF:
+
+![img.png](figures/Reciprocal solutions gibbs energy.png)
+
+In srfGm, there are A:C, B:D, A:D, and B:C. They indicate only constituents in different sublattices are considered 
+interaction. Constituents in the same sublattice are not considered interaction. yi' and yj" are the constituent
+fractions on sublattices 1 and 2. A colon is used to separate constituents on different sublattices in the parameter 
+expression. Two constituents on the same sublattice will sometimes be separated by a comma. In this model, AD, AC, BD, 
+and BC are end members.
+
+Partial gibbs energy of end member AD:
+
+![img.png](figures/partial gibbs energy-AD.png)
+
+#### Excess Gibbs energy for the reciprocal solution
+
+Equation:
+
+![img.png](figures/excess gibbs binary sublattice.png)
+
+There are two “binary” interaction parameters for each sublattice depending on the constituent on the other sublattice 
+and these are related to the four sides of the constitutional square. The physical significance is the "binary" interaction 
+under the influence of constituents on the other sublattice.
+
+expanded RK formula:
+
+![img.png](figures/RK formula binary sublattice.png)
+![img.png](figures/reciprocal solution parameters.png)
+
+For the models with more sublattices, the excess Gibbs energy is expanded in the same way as for the reciprocal system.
+
+#### The reciprocal miscibility gap
+
+When the reciprocal Gibbs energy, Delta G in Eq. (5.92), is sufficiently large this will create a phase separation with 
+the tie-lines parallel to the diagonal and with the largest energy difference between the corner compounds. The large 
+Delta G means that there is a tendency to form AC and BD rather than AD and BC. To make a clear understanding, I suppose
+several parameters and calculated and visualized miscibility gap in "miscibility gap in reciprocal solution.py" file 
+code direction. AC_BD_end_member_G is set at -10000 and AD_BC_end_member_G is set at -5000. Where the delta G is -10000,
+which means AC and BD is more likely to form. It is obvious with the figure below.
+
+![img.png](figures/reciprocal miscibility gap.png)
+
+When there are no data for an end member of a reciprocal solution, it is often useful to estimate using the assumption 
+that the Delta G in is zero. To avoid the presence of a reciprocal miscibility gap, Hillert suggested the use of a
+special reciprocal parameter:
+
+![img.png](figures/Hillert avoid miscibility gap.png)
+
+the result when add hillert excess gibbs energy:
+
+![img.png](figures/avoid miscibility gap.png)
+
+### Models using two sublattices
+
+When there are several constituents in each sublattice, one can write the model: (A,B...)m(U,V...)n. When no same 
+constituent in different sublattice, the Gibbs energy is:
+
+![img.png](figures/two sublattice gibbs energy.png)
+
+#### Interstitial solutions
+
+The main characteristic of an interstitial solution is that one of the constituents is the vacancy. A model for B1 as
+both metal and carbon–nitride–boride phases in a multicomponent steel is (Fe,Cr,Ni,Ti...)1(Va,C,N,B...)1.
+
+#### Models for phases involving metals and non-metals
+
+More than one crystallographically different sublattice for the metallic element, not enough experimental data.
+(Cr,Fe...)20(Cr,Fe,Mo,W...)3(C)6 is an example that some of the elements do not enter all sublattices.
+
+#### The Wagner–Schottky defect model
+
+The first thing needs to be noticed here is that the "defect" is compared to the compounds with perfect compositions. 
+For real situation, the composition will have little variations.
+
+AaBb is a perfect compound, the defects model will be (A,X)a(B,Y)b. This model can be described in the CEF as a
+reciprocal model with four end members: AB, AY, XB, and XY. The defects can be
+
+    (1) anti-site atoms, i.e., B atoms on the sublattice for A and A atoms on the sublattice
+    for B;
+    (2) vacancies;
+    (3) interstitials; or
+    (4) a mixture of the above defects
+
+If interstitial defects are important, the model can be (A)a(B)b(Va,A,B)c. bcc with two identical sublattices, one often
+has anti-site atoms on one side of the ideal composition and vacancies on the other. model is (A,B)1(B,Va)1. In (A,B)1, 
+B is anti-sites atom. Because two sublattices are crystallographically identical, so the compound can be equally written
+BA as AB. For this reason one must include all defects on both sublattices; allowing both anti-site atoms and vacancies
+the model should be (A,B,Va)1(B,A,Va)1. 
+
+The Wagner–Schottky defect model considers only one defect for each sublattice and three parameters are needed:
+
+![img.png](figures/Wagner-Schottky model.png)
+
+GX:Y is considered not stable, thus it is set equal to zero.
+
+![img.png](figures/equilibrium fraction of defects.png)
+
+![img.png](figures/sublattice gibbs model.png)
+
+GA:A is gibbs energy of pure A with the structure of AaBb, GB:B is the same thing. GB:A is gibbs energy of pure defects.
+
+using these two equation, we can derive:
+
+![img.png](figures/some relation in sublattice model at equilibrium.png)
+
+when defects tend to be zero, we can derive:
+
+![img.png](figures/a relationship.png)
 
