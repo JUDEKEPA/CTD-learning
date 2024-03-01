@@ -629,5 +629,55 @@ using these two equation, we can derive:
 
 when defects tend to be zero, we can derive:
 
-![img.png](figures/a relationship.png)
+![img.png](figures/a relationship of defects fractions.png)
+
+The interaction parameter of defects is set equal to ideal one:
+
+![img.png](figures/interaction parameters WS model.png)
+
+assuming that the interaction on each sublattice is independent of the occupation of the other sublattice.
+
+#### A model for B2 ordering of bcc
+
+The B2 ordering of the A2 structure type means that the atom in the center of the unit cell is different from those at
+the corners. 
+
+B2 ordering required two sublattices model in which the sublattices have equal numbers of sites and must be treated as 
+identical for crystallographic reasons. So Gi:j=Gj:i. And all interaction parameters must also be symmetrical. That
+is: Li,j:k=Lk:i,j  Li,j,k:l=Ll:i,j,k. A binary sublattice model for B2 is (A,B,Va)1(A,B,Va)1. In this model, GA:B=GB:A,
+GA:Va=GVa:A, and GB:Va=GVa:B. It is not hard to understand that GA:A=G(A,BCC) and GB:B=G(B,BCC).
+
+#### A model for L12/A1 ordering
+
+L12 modeled with two sublattice (A,B)3(A,B)1. This means that there is a relation between the Gibbs energy of formation
+GA:B and the interaction parameters LAB,* since both are related to the bonding energy of the nearest neighbors. A 
+problem with using the two-sublattice model in an assessment of an L12 ordering is that it may predict an ordered L10 
+ordering if the parameters are converted to a four-sublattice model.
+
+#### Models with three or more sublattices
+
+It may be necessary to simplify the models to fewer sublattices since there might not be enough experimental data. It is
+fairly common to use three or four sublattices, the model for a phase with three sublattices is: 
+(A,B...)a1(K,L...)a2(U,V...)a3.
+
+![img.png](figures/gibbs energy with three sublattices.png)
+
+![img.png](figures/excess gibbs energy of three sublattices model.png)
+
+The number of possible excess parameters is very large, but normally very few are used.
+
+#### Models for intermetallic phases
+
+For The σ phase has five different crystallographic sublattices, but only three are used in the modeling, because there
+are not enough experimental data.
+
+### Models for phases with order–disorder transitions
+
+When there is no excess gibbs energy parameters, the sublattice model is identical to the Bragg–Williams–Gorsky 
+treatment of ordering, with the excess parameters in the CEF one may reproduce the real properties of the ordering 
+transformation better. The disorder is the constituents arrange randomly in its sublattice.
+
+
+
+
 
