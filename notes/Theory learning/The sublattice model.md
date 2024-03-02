@@ -677,7 +677,26 @@ When there is no excess gibbs energy parameters, the sublattice model is identic
 treatment of ordering, with the excess parameters in the CEF one may reproduce the real properties of the ordering 
 transformation better. The disorder is the constituents arrange randomly in its sublattice.
 
+#### The disordered state of an ordered phase
 
+When applying yi'=yi''= xi, the gibbs energy equations are:
+
+![img.png](figures/order-disorder transitions.png)
+
+all these equation can be obtained with the conditions below:
+
+![img.png](figures/some relation used for order-disorder transitions.png)
+
+It should notice that the third equation used the LAB into LAB:*, it provides a method that using interaction parameter 
+obtained from regular solution model into sublattice model. It can be conducted like this:
+
+![img.png](figures/regular solution gibbs energy.png) is equal to ![img_1.png](figures/sublattice model gibbs energy(a step).png)
+
+then
+
+![img_2.png](figures/conduction result of relationship between LAB and LAB:*.png)
+
+#### Partitioning of the Gibbs energy for ordered phases
 
 
 
