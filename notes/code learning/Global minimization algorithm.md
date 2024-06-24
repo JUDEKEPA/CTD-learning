@@ -229,9 +229,7 @@ lower_convex_hull function.
 In lower_convex_hull function, the codes before function 'hyperplane' seem to be used for multi-task condition 
 management. hyperplane function is written in .pyx, now we can step into it.
 
-
-
-
     properties = _solve_eq_at_conditions(properties, phase_records, grid,
                                          list(str_conds.keys()), state_variables,
                                          verbose, solver=solver)
+
